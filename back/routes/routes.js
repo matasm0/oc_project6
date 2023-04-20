@@ -12,9 +12,9 @@ router.post('/login', userCtrl.login);
 router.get('/', sauceCtrl.getSauces);
 router.get('/:id', sauceCtrl.getOneSauce);
 router.post('/', multer, sauceCtrl.postSauce);
-// router.put('/:id', sauceCtrl.updateSauce);
-// router.delete('/:id', sauceCtrl.deleteSauce);
-// router.post('/:id/like', sauceCtrl.likeDislike);
+router.put('/:id', multer, sauceCtrl.updateSauce);
+router.delete('/:id', sauceCtrl.deleteSauce);
+router.post('/:id/like', sauceCtrl.likeDislike);
 
 
 module.exports = router;
